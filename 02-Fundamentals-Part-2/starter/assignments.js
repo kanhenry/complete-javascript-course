@@ -73,20 +73,20 @@ if (numNeighbours == 1) {
 */
 
 //////// Coding Challenge #3
-/* 
-There are two gymnastics teams, Dolphins and Koalas. They compete against each 
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
 other 3 times. The winner with the highest average score wins a trophy!
 Your tasks:
 1. Calculate the average score for each team, using the test data below
-2. Compare the team's average scores to determine the winner of the competition, 
-and print it to the console. Don't forget that there can be a draw, so test for that 
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
 as well (draw means they have the same average score)
-3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a 
-team only wins if it has a higher score than the other team, and the same time a 
-score of at least 100 points. Hint: Use a logical operator to test for minimum 
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
 score, as well as multiple else-if blocks �
-4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when 
-both teams have the same score and both have a score greater or equal 100 
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
 points. Otherwise, no team wins the trophy
 Test data:
 § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
@@ -223,4 +223,98 @@ checkWinner(dAvg, kAvg);
 
 */
 
+//coding challenge 1
+// const kScore1 = 50;
+// const kScore2 = 20;
+// const kScore3 = 23;
+
+// const dScore1 = 33;
+// const dScore2 = 41;
+// const dScore3 = 10;
+
+// const calcAvg = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+// const kScoreAvg = calcAvg(kScore1, kScore2, kScore3);
+// const dScoreAvg = calcAvg(dScore1, dScore2, dScore3);
+
+// function checkWinner(avgDolphins, avgKoalas) {
+//     if (avgDolphins > (avgKoalas * 2)) {
+//         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//     } else if (avgKoalas > (avgDolphins * 2)) {
+//         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//     } else {
+//         console.log(`nobody wins`);
+//     }
+// }
+
+// const populations = [10, 9, 2, 6];
+
+// function percentageOfWorld1(population) {
+//     return (7900000000 / population) * 100;
+// }
+
+// console.log(populations.length === 4)
+
+// const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+
+// basic array operations
+// const neighbours = ['USA', 'Greenland'];
+
+// neighbours.push('Utopia');
+
+// console.log(neighbours);
+
+// console.log(neighbours.pop(neighbours));
+
+// if (!neighbours.includes('Germany')) {
+//     console.log('Probably not a European country');
+// }
+
+// neighbours[0] = 'United States of America';
+
+// const myCountry = {
+//     country: 'Canada',
+//     capital: 'Ottawa',
+//     language: 'English',
+//     population: 5,
+//     neighbours: ['USA', 'Greenland']
+// };
+
+// console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+
+for (let i = 1; i <= 50; i++) {
+    console.log(`voter ${i} is voting`);
+}
+
+const populations = [10, 9, 2, 6];
+
+const percentages2 = [];
+
+function percentageOfWorld1(population) {
+    return (79 / population) * 100;
+}
+
+// for (i = 0; i < populations.length; i++) {
+//     percentages2[i] = percentageOfWorld1(populations[i]);
+// }
+
+let i = 0;
+while (i < populations.length) {
+    percentages2[i] = percentageOfWorld1(populations[i]);
+    i++;
+}
+
+console.log(percentages2);
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+
+for (i = 0; i < listOfNeighbours.length; i++) {
+    for (l = 0; l < listOfNeighbours[i].length; l++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][l]}`);
+    }
+}
 

@@ -91,33 +91,149 @@ console.log(yearsUntilRetirement(1970, 'Jonas'));
 
 */
 
-const friend1 = 'Michael';
-const friend2 = 'Steven';
-const friend3 = 'Peter';
+// const friend1 = 'Michael';
+// const friend2 = 'Steven';
+// const friend3 = 'Peter';
+
+// const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends);
+
+// //const years = new Array(1991, 1984, 2008, 2020);
+
+// console.log(friends[0]);
+
+// console.log(friends.length);
+
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = 'Jay';
+
+// console.log(friends);
+
+// const jonas = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+
+// console.log(jonas);
+
+// function calcAge1(birthYear) {
+//     return 2037 - birthYear;;
+// }
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// console.log(calcAge1(years[0]));
 
 const friends = ['Michael', 'Steven', 'Peter'];
-console.log(friends);
 
-//const years = new Array(1991, 1984, 2008, 2020);
+// Add elements
+// friends.push('Jay');
+// const newLength = friends.push('Jay');
 
-console.log(friends[0]);
+// console.log(friends);
+// console.log(newLength);
 
-console.log(friends.length);
+// friends.unshift('John');
 
-console.log(friends[friends.length - 1]);
+// // Remove elements
+// friends.pop();
+// console.log(friends);
 
-friends[2] = 'Jay';
+// friends.shift();
+// console.log(friends.indexOf('Steven'));
 
-console.log(friends);
+// object literal syntax
+const henry = {
+    firstName: 'Henry',
+    lastName: 'Kan',
+    birthYear: 1998,
+    job: 'UX Designer',
+    friends: ['Leo', 'Jesse', 'Nathan'],
+    hasDriversLicense: true,
 
-const jonas = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+    // calcAge: function (birthYear) {
+    //     return 2022 - birthYear;
+    // }
 
-console.log(jonas);
+    // calcAge: function () {
+    //     return 2022 - this.birthYear;
+    // }
 
-function calcAge1(birthYear) {
-    return 2037 - birthYear;;
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        console.log(`${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license `);
+    }
+};
+
+//dot notation
+// console.log(henry.firstName);
+// console.log(henry['firstName']);
+
+// const nameKey = 'Name';
+
+// //bracket notation
+// console.log(henry['first' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+// console.log(interestedIn);
+
+// console.log(henry[interestedIn]);
+
+// if (henry[interestedIn]) {
+//     console.log(henry[interestedIn]);
+// } else {
+//     console.log('property does not exist. Choose between firstName, lastName, age, job, and friends');
+// }
+
+// henry.location = 'Toronto';
+// henry['instagram'] = '@kan.kapo';
+
+// // challenge
+// // "Henry has 3 friends, and his best friend is called "Leo"
+
+// console.log(`${henry.firstName} has ${henry.friends.length} friends, and his best friend is ${henry.friends[0]}`);
+
+// console.log(henry.calcAge());
+// console.log(henry.age);
+// console.log(henry.age);
+// console.log(henry.age);
+// // console.log(henry['calcAge'](henry.birthYear));
+
+// henry.getSummary()
+
+const henryArray = [
+    'Henry',
+    'Kan',
+    1998,
+    'UX Designer',
+    true
+];
+
+const types = [];
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`Lifting weights repitition ${i}`);
 }
 
-const years = [1990, 1967, 2002, 2010, 2018];
+for (let i = 0; i < henryArray.length; i++) {
+    // types[i] = typeof henryArray[i];
+    types.push(typeof henryArray[i]);
+}
 
-console.log(calcAge1(years));
+console.log(types);
+
+let x = 1;
+while (x <= 10) {
+    console.log(x);
+    x++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}

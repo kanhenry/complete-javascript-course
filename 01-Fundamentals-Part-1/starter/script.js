@@ -174,10 +174,10 @@ console.log(century);
 
 // Coding Challenge #2
 /*
-Use the BMI example from Challenge #1, and the code you already wrote, and 
+Use the BMI example from Challenge #1, and the code you already wrote, and
 improve it.
 Your tasks:
-1. Print a nice output to the console, saying who has the higher BMI. The message 
+1. Print a nice output to the console, saying who has the higher BMI. The message
 is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!"
@@ -294,21 +294,26 @@ switch (day) {
 
 if (23 > 10) {
     const str = '23 is bigger';
-} 
+}
 
 */
 
 
-const age = 23;
-// age >= 18 ? console.log('I like to drink wine') :
-//     console.log('I like to drink water');
+// const age = 23;
+// // age >= 18 ? console.log('I like to drink wine') :
+// //     console.log('I like to drink water');
 
-const drink = age >= 18 ? 'wine' : 'water';
-console.log(`I like to drink ${drink}`);
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(`I like to drink ${drink}`);
 
-let drink2;
-if (age >= 18) {
-    drink2 = 'wine';
-} else {
-    drink2 = 'water';
+// let drink2;
+// if (age >= 18) {
+//     drink2 = 'wine';
+// } else {
+//     drink2 = 'water';
+// }
+
+const calcAge = function (birthYear) {
+
 }
+
